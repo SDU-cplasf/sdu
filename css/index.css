@@ -144,6 +144,7 @@ section.carousel {
 section.carousel > .carousel-nav {
   height: 55px;
   margin-bottom: 23px;
+  position: relative;
 }
 
 section.carousel > .carousel-nav > .logo {
@@ -183,18 +184,19 @@ section.carousel > .carousel-nav > .logo:hover > a > img:nth-child(2) {
 
 section.carousel > .carousel-nav > ul {
   float: left;
-  height: 16px;
-  transform: translateX(189px) translateY(18px);
+  height: 100%;
+  transform: translateX(189px);
 }
 
 section.carousel > .carousel-nav > ul > li {
   float: left;
   margin-right: 20px;
+  height: 100%;
 }
 
 section.carousel > .carousel-nav > ul > li > a {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 55px;
   color: #333333;
 }
 
@@ -202,12 +204,156 @@ section.carousel > .carousel-nav > ul > li > a:hover {
   color: #ff6700;
 }
 
+section.carousel > .carousel-nav > ul > li > div {
+  position: absolute;
+  top: 78px;
+  left: -584px;
+  width: 1904px;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  background-color: #fff;
+  transition: height .3s;
+}
+
+section.carousel > .carousel-nav > ul > li:hover > div {
+  z-index: 10;
+  height: 202px;
+  transition: height .3s;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+}
+
 section.carousel > .carousel-nav > .search {
   float: right;
   width: 296px;
   height: 50px;
   transform: translateY(2px);
-  background-color: aqua;
+  position: relative;
+}
+
+section.carousel > .carousel-nav > .search > input {
+  box-sizing: border-box;
+  float: left;
+  width: 243px;
+  height: 48px;
+  outline: none;
+  border: 1px solid #b0b0b0;
+}
+
+section.carousel > .carousel-nav > .search > input:focus {
+  border-color: #ff6700;
+}
+
+section.carousel > .carousel-nav > .search > input:focus ~ .msg {
+  display: block;
+  border-color: #ff6700;
+}
+
+section.carousel > .carousel-nav > .search > input:focus ~ .btn {
+  border-color: #ff6700;
+}
+
+section.carousel > .carousel-nav > .search > input:focus ~ .tip1 {
+  display: none;
+}
+
+section.carousel > .carousel-nav > .search > input:focus ~ .tip2 {
+  display: none;
+}
+
+section.carousel > .carousel-nav > .search > div.btn {
+  box-sizing: border-box;
+  float: left;
+  width: 50px;
+  height: 48px;
+  border: 1px solid #b0b0b0;
+  border-left: none;
+  position: relative;
+}
+
+section.carousel > .carousel-nav > .search > div.btn > i {
+  position: absolute;
+  top: 11px;
+  left: 17px;
+}
+
+section.carousel > .carousel-nav > .search > div.btn:hover {
+  background-color: #ff6700;
+}
+
+section.carousel > .carousel-nav > .search > div.btn:hover > i {
+  color: #fff;
+}
+
+section.carousel > .carousel-nav > .search > div.msg {
+  position: absolute;
+  top: 48px;
+  width: 241px;
+  height: 300px;
+  border: 1px solid #b0b0b0;
+  border-top: none;
+  display: none;
+  background-color: #fff;
+}
+
+section.carousel > .carousel-nav > .search > div.tip1 {
+  position: absolute;
+  top: 15px;
+  left: 58px;
+  padding: 0 5px;
+  height: 20px;
+  background-color: #d6d3d3;
+}
+
+section.carousel > .carousel-nav > .search > div.tip1 > a {
+  width: 100%;
+  height: 100%;
+}
+
+section.carousel > .carousel-nav > .search > div.tip1 > a > h3 {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #666666;
+}
+
+section.carousel > .carousel-nav > .search > div.tip1:hover {
+  background-color: #ff6700;
+}
+
+section.carousel > .carousel-nav > .search > div.tip1:hover > a > h3 {
+  color: #fff;
+}
+
+section.carousel > .carousel-nav > .search > div.tip2 {
+  position: absolute;
+  top: 15px;
+  left: 147px;
+  height: 20px;
+  padding: 0 5px;
+  background-color: #d6d3d3;
+}
+
+section.carousel > .carousel-nav > .search > div.tip2 > a {
+  width: 100%;
+  height: 100%;
+}
+
+section.carousel > .carousel-nav > .search > div.tip2 > a > h3 {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #666666;
+}
+
+section.carousel > .carousel-nav > .search > div.tip2:hover {
+  background-color: #ff6700;
+}
+
+section.carousel > .carousel-nav > .search > div.tip2:hover > a > h3 {
+  color: #fff;
 }
 
 section.carousel > .carousel-chart {
@@ -260,7 +406,6 @@ main > #main-title-flash-purchase {
 
 main > .main-title {
   height: 22px;
-  background-color: #3e77ac;
   margin-top: 40px;
   margin-bottom: 19px;
 }
@@ -362,7 +507,14 @@ main > .main-commodity > ul > li {
   width: 234px;
   height: 300px;
   margin-left: 14px;
-  background-color: #081c5c;
+  background-color: #ffffff;
+  transition: all .2s linear;
+}
+
+main > .main-commodity > ul > li:hover {
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
 }
 
 main > .main-commodity > ul > li:nth-child(n+5) {
