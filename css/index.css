@@ -571,6 +571,57 @@ main > #main-title-flash-purchase {
   margin-top: 0;
 }
 
+main > #main-title-flash-purchase > div {
+  height: 22px;
+  width: 71px;
+  background-color: #f5f5f5;
+}
+
+main > #main-title-flash-purchase > div > ul {
+  width: 100%;
+  height: 100%;
+}
+
+main > #main-title-flash-purchase > div > ul > li {
+  float: left;
+  width: 34px;
+  height: 22px;
+  border: 1px solid #b0b0b0;
+  margin-left: 0;
+}
+
+main > #main-title-flash-purchase > div > ul > li > i {
+  margin-left: 7px;
+  color: #b0b0b0;
+}
+
+main > #main-title-flash-purchase > div > ul > li:nth-child(1) {
+  border-right: none;
+}
+
+main > article.main-title-p > div {
+  width: 92px;
+}
+
+main > article.main-title-p > div > span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+main > article.main-title-p > div > div {
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #b0b0b0;
+}
+
+main > article.main-title-p > div > div > i {
+  margin-left: 2px;
+  color: #fff;
+  line-height: 20px;
+}
+
 main > .main-title {
   height: 22px;
   margin-top: 40px;
@@ -587,9 +638,37 @@ main > .main-title > h2 {
 
 main > .main-title > div {
   float: right;
-  width: 100px;
   height: 100%;
-  background-color: darkolivegreen;
+}
+
+main > .main-title > div > ul {
+  width: 100%;
+  height: 100%;
+}
+
+main > .main-title > div > ul > li {
+  float: left;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 2px;
+  margin-left: 32px;
+  transition: border .3s;
+}
+
+main > .main-title > div > ul > li:hover {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+
+main > .main-title > div > ul > li:hover ~ li:nth-child(1) {
+  color: #000;
+  border: none;
+}
+
+main > .main-title > div > ul > li:nth-child(1) {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
 }
 
 main > .main-flash-purchase {
@@ -647,7 +726,16 @@ main > .main-commodity > div {
   float: left;
   width: 234px;
   height: 100%;
-  background-color: darkolivegreen;
+}
+
+main > .main-commodity > div > a > img {
+  transition: all .2s linear;
+}
+
+main > .main-commodity > div > a > img:hover {
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
 }
 
 main > .main-commodity > div > ul {
@@ -656,7 +744,13 @@ main > .main-commodity > div > ul {
 
 main > .main-commodity > div > ul > li {
   height: 300px;
-  background-color: hotpink;
+  transition: all .2s linear;
+}
+
+main > .main-commodity > div > ul > li:hover {
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
 }
 
 main > .main-commodity > div > ul > li:nth-child(1) {
