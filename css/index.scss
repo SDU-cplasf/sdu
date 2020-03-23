@@ -187,8 +187,9 @@ section.carousel{
                     height: 0;
                     overflow: hidden;
                     box-shadow: 0 3px 4px rgba(0,0,0,.18);
-                    background-color: #fff;
+                    background-color: rgb(124, 43, 43);
                     transition:height .3s;
+                    z-index: 100;
                 }
                 &:hover{
                     >div{
@@ -201,7 +202,6 @@ section.carousel{
             }
         }
         >.search{
-            
             float: right;
             width: 296px;
             height: 50px;
@@ -320,13 +320,15 @@ section.carousel{
     }
     >.carousel-chart{
         height:460px;
-        background-color: #b6b2b2;
         margin-bottom: 14px;
+        position: relative;
         >.carousel-chart-nav{
-            float: left;
+            
             width: 235px;
             height: 100%;
-            background-color: rgba(0, 0, 0,0.05);
+            background: rgba(105,101,101,.6);
+            position: absolute;
+            z-index: 100;
             >ul{
                 width:100%;
                 transform:translateY(19px);
@@ -371,7 +373,6 @@ section.carousel{
                         box-shadow: 0 8px 16px rgba(0,0,0,.18);
                         border: 1px solid #e0e0e0;
                         border-left: none;
-                        z-index: 20;
                         >ul{
                             float: left;
                             width: 248px;
@@ -418,6 +419,14 @@ section.carousel{
                     }
                 }
             }
+        }
+        >.layui-carousel{
+            float: left;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 1226px;
+            z-index: -1;
         }
     }
     >.carousel-display{
@@ -706,7 +715,48 @@ main{
     width: 100%;
     height: 272px;
     margin: 0 auto;
-    padding-top:26px;
+    >div{
+        height: 100%;
+        >ul{
+            width: 100%;
+            height: 79px;
+            border-bottom: 1px solid #b0b0b0;
+            >li{
+                float: left;
+                height: 25px;
+                padding:0  58px;
+                border-right: 1px solid #b0b0b0;
+                transform: translateY(27px);
+                >a{
+                    display: inline-block;
+                    height: 25px;
+                    >i{
+                        float: left;
+                        font-size: 23px; 
+                        transition:color .2s;
+                    }
+                    >span{
+                        float: right;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 25px;
+                        color: #616161;
+                        margin-left: 4px;
+                        transition:color .3s;
+                    }
+                    &:hover{
+                        >i,span{
+                            color: #ff6700;
+                        }
+                    }
+                }
+                
+            }
+            >li:nth-child(5){
+                border:none;
+            }
+        }
+    }
     
 }
 .footer-links{

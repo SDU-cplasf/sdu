@@ -6,9 +6,11 @@
     <meta name="Description" content="">
     <title>小米商城</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1694611_1twreoc5wzw.css">  
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1694611_799yb885dsd.css">  
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+	<script type="text/javaScript" src="layui/layui.js"></script>
 </head>
 <body>
     <header>
@@ -429,7 +431,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="carousel-chart-img"></div>
+            <div class="layui-carousel" id="test1">
+                <div carousel-item>
+                    <div><img src="./images/lbt1.webp" alt=""></div>
+                    <div><img src="./images/lbt2.webp" alt=""></div>
+                    <div><img src="./images/lbt3.webp" alt=""></div>
+                    <div><img src="./images/lbt4.webp" alt=""></div>
+                    <div><img src="./images/lbt5.jpg" alt="" style="width: 1226px; height: 460px;"></div>
+                </div>
+            </div>
         </article>
         <article class="carousel-display public">
             <ul>
@@ -664,7 +674,62 @@
             </ul>
         </article>
     </main>
-    <footer class="footer-nav"></footer>
-    <footer class="footer-links"></footer>
+    <footer class="footer-nav">
+        <div class="public">
+            <ul>
+                <li><a href=""><i class="iconfont icon-gongju"></i><span>预约维修服务</span></a></li>
+                <li><a href=""><i class="iconfont icon-7tianwuliyoutuihuo"></i><span>7天无理由退货</span></a></li>
+                <li><a href=""><i class="iconfont icon-15tianwuliyoutuihuo"></i><span>15天免费换货</span></a></li>
+                <li><a href=""><i class="iconfont icon-liwu"></i><span>满99元包邮</span></a></li>
+                <li><a href=""><i class="iconfont icon-dingwei"></i><span>520余家售后网点</span></a></li>
+            </ul>
+            <div>
+                <ul></ul>
+                <div></div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-links">
+        <div>
+            <img src="" alt="">
+            <div>
+                <ul>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                </ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+            </div>
+        </div>
+        <h3></h3>
+    </footer>
+    <script type="text/javaScript">
+		layui.use('carousel', function(){
+		var carousel = layui.carousel;
+		//建造实例
+		carousel.render({
+			elem: '#test1'
+			,width: '1226px' //设置容器宽度
+			,height:'460px'
+			,arrow: 'always' //始终显示箭头
+			//,anim: 'updown' //切换动画方式
+			});
+		});
+	</script>
 </body>
 </html>
