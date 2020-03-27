@@ -214,7 +214,7 @@ section.carousel > .carousel-nav > ul > li > div {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
   background-color: #7c2b2b;
   transition: height .3s;
-  z-index: 100;
+  z-index: 1000;
 }
 
 section.carousel > .carousel-nav > ul > li:hover > div {
@@ -477,6 +477,7 @@ section.carousel > .carousel-chart > .layui-carousel {
   left: 0;
   right: 0;
   width: 1226px;
+  height: 100%;
   z-index: -1;
 }
 
@@ -825,14 +826,14 @@ main .main-video > ul > li:nth-child(n+2) {
 .footer-nav > div > ul {
   width: 100%;
   height: 79px;
-  border-bottom: 1px solid #b0b0b0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .footer-nav > div > ul > li {
   float: left;
   height: 25px;
   padding: 0  58px;
-  border-right: 1px solid #b0b0b0;
+  border-right: 1px solid #e0e0e0;
   transform: translateY(27px);
 }
 
@@ -863,6 +864,84 @@ main .main-video > ul > li:nth-child(n+2) {
 
 .footer-nav > div > ul > li:nth-child(5) {
   border: none;
+}
+
+.footer-nav > div > div {
+  transform: translateY(36px);
+  width: 100%;
+  height: 112px;
+}
+
+.footer-nav > div > div > ul {
+  float: left;
+  width: 974px;
+  height: 100%;
+  border-right: 1px solid #e0e0e0;
+}
+
+.footer-nav > div > div > ul > li {
+  float: left;
+  width: 160px;
+}
+
+.footer-nav > div > div > ul > li > h3 {
+  font-size: 14px;
+  color: #424242;
+}
+
+.footer-nav > div > div > ul > li > ul {
+  transform: translateY(26px);
+}
+
+.footer-nav > div > div > ul > li > ul > li {
+  margin-bottom: 12px;
+}
+
+.footer-nav > div > div > ul > li > ul > li > a {
+  font-size: 12px;
+  color: #757575;
+}
+
+.footer-nav > div > div > ul > li > ul > li:hover > a {
+  color: #ff6700;
+}
+
+.footer-nav > div > div > div {
+  float: left;
+  height: 100%;
+  transform: translateX(56px);
+}
+
+.footer-nav > div > div > div > p:nth-child(1) {
+  font-size: 22px;
+  color: #ff6700;
+}
+
+.footer-nav > div > div > div > p:nth-child(2) {
+  font-size: 12px;
+  color: #616161;
+  margin-top: 5px;
+}
+
+.footer-nav > div > div > div > a {
+  display: inline-block;
+  width: 118px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  background: #fff;
+  color: #ff6700;
+  margin-top: 5px;
+  margin-left: 8px;
+  border: 1px solid #ff6700;
+}
+
+.footer-nav > div > div > div > div {
+  font-size: 12px;
+  margin-top: 10px;
+  position: relative;
+  color: #616161;
+  margin-left: 8px;
 }
 
 .footer-links {
