@@ -35,6 +35,49 @@ header{
                     padding-left: 8px;
                     border-left: 1px solid #393f3f;
                 }
+                >li:nth-child(11){
+                    position: relative;
+                    >i{
+                        position: absolute;
+                        top: 17px;
+                        left: 17px;
+                        color: #fff;
+                        display: none;
+                        font-size: 30px;
+                        font-weight: 900;
+                    }
+                    >div{
+                        position: absolute;
+                        top: 25px;
+                        left:-50%;
+                        width: 124px;
+                        height:0px;
+                        background: #fff;
+                        box-shadow: 0 1px 5px #aaa;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #333;
+                        line-height: 1;
+                        overflow: hidden;
+                        transition: height .3s;
+                        z-index: 3333333;
+                        >img{
+                            display: block;
+                            width: 90px;
+                            height: 90px;
+                            margin: 18px auto 12px;
+                        }
+                    }
+                    &:hover{
+                        >i{
+                            display: block;
+                        }
+                        >div{
+                            height: 150px;
+                        }
+                        
+                    }
+                }
 
             }
         }  
@@ -814,6 +857,13 @@ main{
                     margin-top: 5px;
                     margin-left: 8px;
                     border: 1px solid #ff6700;
+                    >i{
+                        margin-left: 25px;
+                    }
+                    &:hover{
+                        background: #ff6700;
+                        color:#fff;
+                    }
                 }
                 >div{
                     font-size: 12px;
