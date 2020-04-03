@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .public {
   width: 1226px;
   margin: 0 auto;
@@ -992,11 +993,61 @@ main .main-video > ul > li:nth-child(n+2) {
 }
 
 .footer-nav > div > div > div > div {
-  font-size: 12px;
   margin-top: 10px;
-  position: relative;
-  color: #616161;
   margin-left: 8px;
+  padding-top: 1px;
+}
+
+.footer-nav > div > div > div > div > span {
+  display: inline-block;
+  font-size: 12px;
+  color: #616161;
+  margin-top: 2px;
+}
+
+.footer-nav > div > div > div > div > a {
+  display: inline-block;
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-nav > div > div > div > div > a:nth-child(2) {
+  background: url(/项目练习/小米官网/images/wb.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+
+.footer-nav > div > div > div > div > a:nth-child(2):hover {
+  background-image: url(/项目练习/小米官网/images/wb@2x.png);
+}
+
+.footer-nav > div > div > div > div > a:nth-child(3) {
+  background: url(/项目练习/小米官网/images/wx.png) 50% 0 no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footer-nav > div > div > div > div > a:nth-child(3) > div {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px #666666;
+  display: none;
+}
+
+.footer-nav > div > div > div > div > a:nth-child(3) > div > img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-nav > div > div > div > div > a:nth-child(3):hover {
+  background-image: url(/项目练习/小米官网/images/wx@2x.png);
+}
+
+.footer-nav > div > div > div > div > a:nth-child(3):hover > div {
+  display: block;
 }
 
 .footer-links {
@@ -1004,4 +1055,45 @@ main .main-video > ul > li:nth-child(n+2) {
   height: 231px;
   margin: 0 auto;
   background-color: #f5f5f5;
+}
+
+.footer-links > div {
+  width: 1044px;
+  height: 174px;
+  background-color: #66605b;
+  transform: translateX(340px) translateY(30px);
+  position: relative;
+}
+
+.footer-links > div > .logo-footer {
+  float: left;
+  width: 57px;
+  height: 57px;
+  margin-right: 10px;
+  background: url(/项目练习/小米官网/images/logo-footer.png) 50% 50% no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-links > div > div.links {
+  float: left;
+  margin-left: 67px;
+}
+
+.footer-links > div > div.links > ul.sites {
+  height: 18px;
+}
+
+.footer-links > div > div.links > ul.sites > li {
+  float: left;
+  height: 18px;
+  border-right: 2px solid #b0b0b0;
+  padding: 0 3px 0 3px;
+}
+
+.footer-links > div > div.links > ul.sites > li > a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #b0b0b0;
 }
